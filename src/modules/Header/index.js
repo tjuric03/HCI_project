@@ -1,9 +1,12 @@
 import React from "react"
 import styles from "./style.module.css"
 
+import Logo from '../../components/Logo'
+
 const Header = () => (
   <header className={styles.header}>
-    <h2>This is the header</h2>
+    <Logo/>
+    This is the header
   </header>
 )
 

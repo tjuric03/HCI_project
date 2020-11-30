@@ -1,6 +1,5 @@
 .header {
-    display: flex;
-    height: 120px;
-    margin: 0 10px;
+    display: block;
+    margin: 5px 10px;
     align-items: center;
 }
