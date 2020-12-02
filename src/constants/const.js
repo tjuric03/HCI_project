@@ -1,0 +1,1 @@
+export const navTabs = ['Home', 'News', 'Schedule', 'About'];

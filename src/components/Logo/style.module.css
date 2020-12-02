@@ -1,6 +1,4 @@
 .logo {
-    display: inline-block;
     width: 200px;
-    height: auto;
-    vertical-align: middle;
+    min-width: 150px;
   }
