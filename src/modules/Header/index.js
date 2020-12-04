@@ -7,7 +7,7 @@ import Navigation from "../../components/Navigation"
 const Header = () => (
   <header className={styles.header}>
     <Logo/>
-    <Navigation/>
+    <Navigation activeTab = "Home"/>
   </header>
 )
 

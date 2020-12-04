@@ -4,10 +4,27 @@
 }
 
 .navigation li{
-    padding: 15px 15px;
+    padding: 10px 20px;
     margin: 10px;
+    list-style: none;
     width: fit-content;
     font-size: 15px;
     text-transform: uppercase;
+    background-color: gray;
+}
+
+.navigation li:hover, .dropdown:hover{
+    cursor: pointer;
+    background-color: rgb(95, 95, 95);
+}
+
+.navigation .active, .navigation .active:hover{
+    border: 1px solid black;
+}
+
+.dropdown {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size:15px;
     background-color: gray;
 }

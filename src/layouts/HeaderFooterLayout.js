@@ -2,9 +2,9 @@ import React from 'react';
 import Footer from '../modules/Footer'
 import Header from '../modules/Header'
 
-const HeaderFooterLayout = ({children}) => (
+const HeaderFooterLayout = ({children, activeTab}) => (
     <>
-        <Header/>
+        <Header activeTab={activeTab}/>
             {children}
         <Footer/>
     </>
