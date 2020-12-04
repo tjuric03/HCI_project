@@ -7,7 +7,9 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
+
 a:active,
 a:hover {
   outline-width: 0;

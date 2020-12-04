@@ -1,6 +1,28 @@
 .footer {
-    display: flex;
-    height: 120px;
-    margin: 0 10px;
+    height: auto;
     align-items: center;
+    background-color: darkgrey;
+    justify-content: space-between;
 }
+
+.categories{
+    display:flex;
+    margin: auto;
+}
+
+.footer div div{
+    padding: 20px 100px;
+    margin:auto;
+}
+
+.footer ul {
+    list-style: none;
+    text-align: left;
+    padding: 0px;
+}
+
+.footer li {
+    margin: 10px 0px;
+    width: fit-content;
+}
+
