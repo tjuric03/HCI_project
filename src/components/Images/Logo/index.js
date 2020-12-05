@@ -18,7 +18,7 @@ const Logo = () => {
   `)
 
   return (
-    <Img fluid={data.file.childImageSharp.fluid} alt="Logo" className = {styles.logo} />
+      <Img fluid={data.file.childImageSharp.fluid} alt="Logo" className = {styles.logo} />
   )
 }
 

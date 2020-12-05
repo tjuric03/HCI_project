@@ -1,0 +1,20 @@
+.featured {
+    display: flex;
+    margin: 20px 0px;
+    max-height: 600px;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f3f3f3;
+}
+
+.featured article {
+    max-width: 70%;
+    margin: 0 auto;
+    letter-spacing: 0.2px;
+}
+
+.article{
+    margin: auto, 0;
+    position: relative;
+}

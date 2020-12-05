@@ -1,7 +1,7 @@
 import React from "react"
 import styles from "./style.module.css"
 
-import Logo from '../../components/Logo'
+import Logo from '../../components/Images/Logo'
 import Navigation from "../../components/Navigation"
 
 const Header = () => (
