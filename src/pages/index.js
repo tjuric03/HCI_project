@@ -3,7 +3,7 @@ import HeaderFooterLayout from '../layouts/HeaderFooterLayout'
 import TitlePage from "../modules/TitlePage"
 
 const IndexPage = () => (
-  <HeaderFooterLayout>
+  <HeaderFooterLayout activeTab="Home">
     <TitlePage></TitlePage>
   </HeaderFooterLayout>
 )
