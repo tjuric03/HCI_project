@@ -7,7 +7,7 @@ const FeaturedImage = () => {
     query MyQuery {
       file(relativePath: { eq: "trampoline.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1600) {
+          fluid(maxWidth: 800, maxHeight:400, cropFocus: CENTER, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -15,7 +15,7 @@ const FeaturedImage = () => {
     }
   `)
   return(
-    <div style={{maxWidth: "800px", minWidth: "800px"}}> 
+    <div style={{minWidth: "800px",maxWidth:"800px", }}> 
       <Img fluid={data.file.childImageSharp.fluid} alt="FeatureImage"/>
     </div>
   )

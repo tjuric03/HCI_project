@@ -7,6 +7,7 @@ const Featured = () => {
     return(
         <section className={styles.featured}>
             <FeaturedImage></FeaturedImage>
+
             <div className={styles.article}>
                 <article >
                     <h2>Trampoline best Olympic sport confirmed</h2>

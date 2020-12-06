@@ -7,7 +7,7 @@ const NewsImage1 = () => {
    query {
      myImage: file(relativePath: { eq: "news1.jpg" }) {
        childImageSharp {
-         fixed(width: 340 height:191) {
+         fixed(width: 340 height:191 quality: 100) {
            ...GatsbyImageSharpFixed
          }
        }
