@@ -8,8 +8,8 @@ const Navigation = ({activeTab}) => {
 
     return (
         <nav className={styles.navigation}>
-            {navTabs.map(({tab,to}) => (
-                <Link to={to}>
+            {navTabs.map(({tab,to},index) => (
+                <Link key={index} to={to} style={{margin:"0px 15px"}}>
                     <li className={tab === activeTab ? styles.active: ''}>{tab}</li>
                 </Link>)
             )}

@@ -2,8 +2,6 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-import styles from "./style.module.css"
-
 const Logo = () => {
     const data = useStaticQuery(graphql`
     query {
@@ -18,7 +16,9 @@ const Logo = () => {
   `)
 
   return (
-      <Img fluid={data.file.childImageSharp.fluid} alt="Logo" className = {styles.logo} />
+    <div style={{minWidth:"150px",maxWidth:"200px",flex:"1"}}> 
+      <Img fluid={data.file.childImageSharp.fluid} alt="Logo"/>
+    </div>
   )
 }
 

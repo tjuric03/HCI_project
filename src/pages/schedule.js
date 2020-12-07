@@ -1,9 +1,10 @@
 import React from 'react'
+import PageTitle from '../components/PageTitle'
 import HeaderFooterLayout from '../layouts/HeaderFooterLayout'
 
 const Schedule = () => (
     <HeaderFooterLayout activeTab="Schedule">
-        <div style={{height:"500px"}}>Schedule</div>
+        <PageTitle title="SCHEDULE"></PageTitle>
     </HeaderFooterLayout>
 )
 

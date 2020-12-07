@@ -7,7 +7,7 @@ const NewsArticle = ({picture,header}) => {
         <article>
             {picture}
             <h2>{header}</h2>
-            <time datetime="2020-12-5">December 5, 2020</time>
+            <time dateTime="2020-12-5">December 5, 2020</time>
         </article>
     )
 }
