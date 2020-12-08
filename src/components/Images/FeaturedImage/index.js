@@ -4,19 +4,26 @@ import Img from "gatsby-image"
 
 const FeaturedImage = () => {
   const data = useStaticQuery(graphql`
-    query MyQuery {
-      file(relativePath: { eq: "trampoline.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 800, maxHeight:450, cropFocus: CENTER, quality: 100) {
-            ...GatsbyImageSharpFluid
+  query {
+    allContentfulPost(filter: {node_locale: {eq: "en-US"}, title: {eq: "Trampoline best Olympic sport confirmed"}}) {
+      edges {
+        node {
+          title
+          sport
+          image {
+            id
+            fluid(maxWidth: 1000, maxHeight: 600, quality: 100) {
+              ...GatsbyContentfulFluid
+            }
           }
         }
       }
     }
+  }
   `)
   return(
     <div style={{minWidth:"500px",maxWidth:"720px",flex:"1"}}> 
-      <Img fluid={data.file.childImageSharp.fluid} alt="FeatureImage"/>
+      <Img fluid={data.allContentfulPost.edges[0].node.image.fluid}/>
     </div>
   )
 }
