@@ -2,10 +2,13 @@ import { graphql } from "gatsby"
 import React from "react"
 import HeaderFooterLayout from "../layouts/HeaderFooterLayout"
 import Img from "gatsby-image"
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
 const NewsPostContentful = props => {
 
-    const post = props.data.contentfulPost
+    const post = props.data.contentfulPost;
+    const content = documentToReactComponents(JSON.parse(post.content.raw));
+    console.log(content);
 
     return (
         <HeaderFooterLayout activeTab="News">
@@ -14,7 +17,7 @@ const NewsPostContentful = props => {
             </div>
             <div>{post.title}</div>
             <div>{post.author}</div>
-            <div>{post.content.raw}</div>
+            <div>{content}</div>
             <div>{post.sport}</div>
             <div>{post.date}</div>
         </HeaderFooterLayout>

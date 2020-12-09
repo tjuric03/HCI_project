@@ -22,23 +22,8 @@ exports.createPages = ({ graphql, actions }) => {
             edges {
             node {
                 title
-                sport
-                image {
-                id
-                fluid(maxWidth: 1000, maxHeight: 600, quality: 100) {
-                    base64
-                    tracedSVG
-                    srcWebp
-                    srcSetWebp
-                    src
-                }
-                }
                 slug
                 date
-                author
-                content {
-                raw
-                }
             }
             }
         }
