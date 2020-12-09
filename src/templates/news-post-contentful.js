@@ -15,7 +15,7 @@ const NewsPostContentful = props => {
             <div style={{minWidth:"500px",maxWidth:"720px",flex:"1"}}> 
                 <Img fluid={post.image.fluid}/>
             </div>
-            <div>{post.title}</div>
+            <h1>{post.title}</h1>
             <div>{post.author}</div>
             <div>{content}</div>
             <div>{post.sport}</div>

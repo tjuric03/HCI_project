@@ -1,13 +1,16 @@
 import React from 'react'
 import NewsImage1 from '../Images/NewsImage1'
 import styles from './style.module.css'
+import Img from "gatsby-image"
 
-const NewsArticle = ({picture,header}) => {
+const NewsArticle = ({picture,date,header}) => {
     return (
         <article>
-            {picture}
+            <div style={{ width: "340px", height: "191px" }}>
+                <Img fluid={picture} />
+            </div>
             <h2>{header}</h2>
-            <time dateTime="2020-12-5">December 5, 2020</time>
+            <time dateTime={date}>{date}</time>
         </article>
     )
 }
