@@ -8,9 +8,11 @@ import Navigation from "../../components/Navigation"
 const Header = ({activeTab}) => (
   <header className={styles.header}>
     <Link to="/" style={{minWidth:"150px",maxWidth:"200px",flex:"1"}}>
-      <Logo/>
+      <div style={{minWidth:"150px",maxWidth:"200px",flex:"1"}}> 
+        <Logo/>
+      </div>
     </Link>
-    <Navigation activeTab = {activeTab}/>
+    <Navigation activeTab = {activeTab} componentStyle="Header"/>
   </header>
 )
 

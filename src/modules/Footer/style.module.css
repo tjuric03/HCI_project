@@ -1,28 +1,32 @@
-.footer {
-    height: auto;
+.footer {    
     align-items: center;
     background-color: darkgrey;
-    justify-content: space-between;
+    padding: 10px 50px;
 }
 
 .categories{
-    display:flex;
-    margin: auto;
+    display: flex;
 }
 
-.footer div div{
-    padding: 20px 100px;
-    margin:auto;
+.categories div{
+    margin: auto;
+    padding: 0 20px;
 }
 
 .footer ul {
     list-style: none;
     text-align: left;
-    padding: 0px;
+    white-space: nowrap
 }
 
-.footer li {
-    margin: 10px 0px;
-    width: fit-content;
+
+.media li{
+    font-size: 22px;
 }
 
+.copyright{
+    background-color: black;
+    color:white;
+    text-align: center;
+    padding: 4px;
+}

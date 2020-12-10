@@ -37,7 +37,7 @@ export const pageQuery = graphql`
         author
         date
         image {
-            fluid(maxWidth: 1000, maxHeight: 600, quality: 100) {
+            fluid(maxWidth: 1100, maxHeight: 600, quality: 100) {
                 ...GatsbyContentfulFluid
             }
             title
