@@ -1,8 +1,23 @@
-
 .calendarContainer{
     height:650px;
-    margin: 20px 100px;
+    max-width: 1200px;
+    margin: 20px auto;
 }
 
 .calendar{
+}
+
+.popup{
+    vertical-align: middle;
+    padding: 1px;
+}
+
+.popup div{
+    margin: 25px;
+    text-align: left;
+}
+
+.icons{
+    vertical-align: middle;
+    padding-right: 10px;
 }

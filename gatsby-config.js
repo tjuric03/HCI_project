@@ -5,12 +5,21 @@ if (process.env.NODE_ENV !== 'production'){
 }
 
 module.exports = {
+  
   siteMetadata: {
     title: `Olympic Games`,
     description: `Site created for "Human Computer Interactions" course`,
     author: `tjuric03,lcmrle00`,
-  },
+  }, 
   plugins: [
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: "f7wwsvhmspom", //process.env.CONTENTFUL_SPACE_ID,
+        accessToken: `Rzgj3CzKGwieVX_YvRh2KCa96p1gv2HV5cmYiBt_y7w`//process.env.CONTENTFUL_ACCESS_TOKEN
+      }
+    },
+    `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -33,13 +42,7 @@ module.exports = {
         icon: `src/images/logo.png`, // This path is relative to the root of the site.
       },
     },
-    {
-      resolve: `gatsby-source-contentful`,
-      options: {
-        spaceId: `f7wwsvhmspom`,
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
-      }
-    },
+    
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
