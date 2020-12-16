@@ -19,5 +19,6 @@
 
 .article{
     flex: 1;
-    padding: 50px;
+    padding: 0px 50px;
+    line-height: 1.4;
 }
