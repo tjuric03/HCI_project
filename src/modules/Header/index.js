@@ -1,9 +1,18 @@
 import React from "react"
 import styles from "./style.module.css"
 
-const Header = () => (
+import {Link} from 'gatsby'
+import Logo from '../../components/Images/Logo'
+import Navigation from "../../components/Navigation"
+
+const Header = ({activeTab}) => (
   <header className={styles.header}>
-    <h2>This is the header</h2>
+    <Link to="/" style={{minWidth:"150px",maxWidth:"200px",flex:"1"}}>
+      <div style={{minWidth:"150px",maxWidth:"200px",flex:"1"}}> 
+        <Logo/>
+      </div>
+    </Link>
+    <Navigation activeTab = {activeTab} componentStyle="Header"/>
   </header>
 )
 

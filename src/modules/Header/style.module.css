@@ -1,6 +1,6 @@
 .header {
+    padding: 10px 20px;
     display: flex;
-    height: 120px;
-    margin: 0 10px;
-    align-items: center;
+    justify-content: space-between;
+    background-color: darkgrey;
 }

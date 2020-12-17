@@ -1,0 +1,20 @@
+import React from 'react'
+import styles from './style.module.css'
+
+import {navTabs} from '../../constants/const'
+import {Link} from 'gatsby'
+
+const Navigation = ({activeTab,componentStyle}) => {
+
+    return (
+        <nav className={componentStyle === "Header" ? styles.navigation : styles.navigationFooter}>
+            {navTabs.map(({tab,to},index) => (
+                <Link key={index} to={to} style={componentStyle === "Header" ? {margin:"0px 15px"} : {}}>
+                    <li className={tab === activeTab ? styles.active: ''}>{tab}</li>
+                </Link>)
+            )}
+        </nav>
+    )
+}
+
+export default Navigation

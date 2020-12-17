@@ -1,6 +1,32 @@
-.footer {
-    display: flex;
-    height: 120px;
-    margin: 0 10px;
+.footer {    
     align-items: center;
+    background-color: darkgrey;
+    padding: 10px 50px;
+}
+
+.categories{
+    display: flex;
+}
+
+.categories div{
+    margin: auto;
+    padding: 0 20px;
+}
+
+.footer ul {
+    list-style: none;
+    text-align: left;
+    white-space: nowrap
+}
+
+
+.media li{
+    font-size: 22px;
+}
+
+.copyright{
+    background-color: black;
+    color:white;
+    text-align: center;
+    padding: 4px;
 }
