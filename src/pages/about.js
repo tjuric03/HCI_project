@@ -2,7 +2,6 @@ import React from 'react'
 import AboutParagraph from '../components/AboutParagraph'
 import HeaderFooterLayout from '../layouts/HeaderFooterLayout'
 import {aboutText1} from '../constants/const'
-import Img from "gatsby-image"
 import AboutMainImage from '../components/Images/AboutMainImage'
 
 const About = (props) => {

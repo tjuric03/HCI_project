@@ -1,6 +1,4 @@
 import React from 'react'
-import NewsImage1 from '../Images/NewsImage1'
-import styles from './style.module.css'
 import Img from "gatsby-image"
 
 const NewsArticle = ({picture,date,header}) => {

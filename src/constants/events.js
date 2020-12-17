@@ -40,8 +40,8 @@ export default [
 ]
 
 export const colors = {
-  "Basketball": "lightsalmon",
-  "Football": "lightgreen",
-  "Swimming": "lightblue",
-  "Trampoline": "lightcoral"
+  "Basketball": "#FF6600",
+  "Football": "#33CC33",
+  "Swimming": "#66CCFF",
+  "Trampoline": "#FF6666"
 };

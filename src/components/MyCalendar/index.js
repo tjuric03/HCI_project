@@ -1,19 +1,51 @@
-import React, { Children } from "react"
+import React from "react"
 import moment from "moment"
 import { Calendar, momentLocalizer } from "react-big-calendar"
 import events, { colors } from "../../constants/events"
 // import 'react-big-calendar/lib/css/react-big-calendar.css';
 import styles from "./style.module.css"
 import "./cal.scss"
-import Tippy, { roundArrow, tippy } from "@tippyjs/react"
+import Tippy from "@tippyjs/react"
 import "react-tippy/dist/tippy.css"
 import "tippy.js/themes/light.css"
 import {AiFillClockCircle} from "react-icons/ai"
 import {MdLocationOn} from "react-icons/md"
 import {GiLaurelsTrophy} from "react-icons/gi"
 
+
+function LightenDarkenColor(col, amt) {
+  
+  var usePound = false;
+
+  if (col[0] === "#") {
+      col = col.slice(1);
+      usePound = true;
+  }
+
+  var num = parseInt(col,16);
+
+  var r = (num >> 16) + amt;
+
+  if (r > 255) r = 255;
+  else if  (r < 0) r = 0;
+
+  var b = ((num >> 8) & 0x00FF) + amt;
+
+  if (b > 255) b = 255;
+  else if  (b < 0) b = 0;
+
+  var g = (num & 0x0000FF) + amt;
+
+  if (g > 255) g = 255;
+  else if (g < 0) g = 0;
+
+  return (usePound?"#":"") + (g | (b << 8) | (r << 16)).toString(16);
+
+}
+
 moment.locale("hr")
 const localizer = momentLocalizer(moment)
+
 
 const EventComponent = ({ event }) => {
   return (
@@ -37,16 +69,16 @@ const EventComponent = ({ event }) => {
       trigger="click"
       theme={"light"}
       placement={"bottom"}
-      offset={[0, -10]}
+      offset={[0, 0]}
       zIndex={"1000"}
-      arrow = {true}
+      duration= "0"
       appendTo={() =>
         document.querySelector(".style-module--calendarContainer--2RFKR")
       }
-      delay={[100, 0]}
+      delay={[0, 0]}
       
     >
-      <div className="rbc-event-content" title={event.title}>
+      <div className="rbc-event-content" title={event.title} style={{padding:"2px 5px"}}>
         {event.sport}
       </div>
     </Tippy>
@@ -66,9 +98,13 @@ const MyCalendar = () => {
         className={styles.calendar}
         components={{ event : EventComponent }}
         eventPropGetter={(event, start, end, isSelected) => {
+          let newColor = LightenDarkenColor(colors[event.sport],-30);
+
           let newStyle = {
             backgroundColor: colors[event.sport],
             color: "black",
+            outlineColor: newColor,
+            border: "none"
           }
           return {
             className: "",
@@ -76,7 +112,7 @@ const MyCalendar = () => {
           }
         }}
         onSelectEvent={event => {
-          console.log("Clicked")
+
         }}
       />
     </div>

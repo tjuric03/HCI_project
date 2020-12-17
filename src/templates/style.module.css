@@ -1,0 +1,17 @@
+.container{
+    margin: 20px auto;
+    max-width: 1024px;
+}
+
+.article{
+    padding: 0px 25px;
+}
+
+.article h1{
+    font-size: xx-large;
+    text-align: left;
+}
+
+.author{
+    color: rgb(90, 90, 90);
+}

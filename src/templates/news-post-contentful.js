@@ -3,6 +3,7 @@ import React from "react"
 import HeaderFooterLayout from "../layouts/HeaderFooterLayout"
 import Img from "gatsby-image"
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import styles from "./style.module.css"
 
 const NewsPostContentful = props => {
 
@@ -12,14 +13,19 @@ const NewsPostContentful = props => {
 
     return (
         <HeaderFooterLayout activeTab="News">
-            <div style={{minWidth:"500px",maxWidth:"720px",flex:"1"}}> 
-                <Img fluid={post.image.fluid}/>
+            <div className={styles.container}>
+                <article className={styles.article}>
+                    <h1>{post.title}</h1>
+                    <div className={styles.author}>{post.author}</div>
+                    <hr  width="150" align="left"></hr>
+                    <div style={{minWidth:"500px",maxWidth:"720px", margin:"30px auto"}}> 
+                        <Img fluid={post.image.fluid}/>
+                    </div>
+                    <div>{content}</div>
+                    <div>{post.sport}</div>
+                    <div>{post.date}</div>
+                </article>
             </div>
-            <h1>{post.title}</h1>
-            <div>{post.author}</div>
-            <div>{content}</div>
-            <div>{post.sport}</div>
-            <div>{post.date}</div>
         </HeaderFooterLayout>
     )
 }

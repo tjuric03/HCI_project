@@ -4,9 +4,6 @@
     margin: 20px auto;
 }
 
-.calendar{
-}
-
 .popup{
     vertical-align: middle;
     padding: 1px;
@@ -20,4 +17,5 @@
 .icons{
     vertical-align: middle;
     padding-right: 10px;
+    color: black;
 }
