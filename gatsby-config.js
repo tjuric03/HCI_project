@@ -12,7 +12,6 @@ module.exports = {
     author: `tjuric03,lcmrle00`,
   }, 
   plugins: [
-<<<<<<< HEAD
     {
       resolve: `gatsby-source-contentful`,
       options: {
@@ -20,8 +19,6 @@ module.exports = {
         accessToken: `Rzgj3CzKGwieVX_YvRh2KCa96p1gv2HV5cmYiBt_y7w`//process.env.CONTENTFUL_ACCESS_TOKEN
       }
     },
-=======
->>>>>>> 790179be8c0e9ecf456d4a887e57ed75dcddc17e
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     {
