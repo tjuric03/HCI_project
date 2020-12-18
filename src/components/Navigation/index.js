@@ -9,7 +9,7 @@ const Navigation = ({activeTab,componentStyle}) => {
     return (
         <nav className={componentStyle === "Header" ? styles.navigation : styles.navigationFooter}>
             {navTabs.map(({tab,to},index) => (
-                <Link key={index} to={to} style={componentStyle === "Header" ? {margin:"0px 15px"} : {}}>
+                <Link className={styles.link} key={index} to={to} style={componentStyle === "Header" ? {padding:"0px 15px",position:"relative"} : {}}>
                     <li className={tab === activeTab ? styles.active: ''}>{tab}</li>
                 </Link>)
             )}
