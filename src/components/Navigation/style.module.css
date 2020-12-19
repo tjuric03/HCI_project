@@ -73,10 +73,10 @@
         left: 50%;
         transform: translate(-50%, 0);
         z-index: 1;
-        width: 60vh; /* Maybe change this in the future */
+        width: 80vw; /* Maybe change this in the future */
         height: 40px;
-        /* background: #E83474;
-        opacity: 0.5; */
+        background: #E83474;
+        opacity: 0.5;
         
     }
 

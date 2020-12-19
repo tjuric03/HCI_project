@@ -9,8 +9,8 @@ const Footer = () => (
     <>
     <footer className={styles.footer}>
         <div className={styles.categories}>
-            <div>
-                <div style={{width:"220px"}}> 
+            <div className={styles.info}>
+                <div style={{width:"180px", paddingBottom:"10px", margin:"auto"}}> 
                     <Logo/>
                 </div>
                 
@@ -22,16 +22,17 @@ const Footer = () => (
                     <li>Switzerland</li>
                 </ul>
             </div>
-            <hr></hr>
-                <div>
-                    <Navigation className={styles.nav}></Navigation>
-                </div>
-            <hr></hr>
             <div>
                 <ul className={styles.media}>
-                    <li> <AiFillTwitterSquare size="64px" style={{verticalAlign:"middle"}}/> @Olympics</li>
-                    <li> <AiFillInstagram size="64px" style={{verticalAlign:"middle"}}/>@olympics</li>
-                    <li> <AiFillFacebook size="64px" style={{verticalAlign:"middle"}}/> facebook.com/olympics</li>
+                    <a href="https://www.google.com/">
+                        <li > <AiFillTwitterSquare size="60px" style={{verticalAlign:"middle"}}/> @Olympics</li>
+                    </a>
+                    <a href="https://www.google.com/">
+                        <li> <AiFillInstagram size="60px" style={{verticalAlign:"middle"}}/> @olympics</li>
+                    </a>
+                    <a href="https://www.google.com/">
+                        <li> <AiFillFacebook size="60px" style={{verticalAlign:"middle"}}/> /olympics</li>
+                    </a>
                 </ul>
             </div>
         </div>
