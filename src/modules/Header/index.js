@@ -6,12 +6,14 @@ import Navigation from "../../components/Navigation"
 import "./Header.css";
 import {GiHamburgerMenu} from "react-icons/gi"
 
+
+
 const Header = ({activeTab}) => {
   const [isNavVisible, setNavVisibility] = useState(false);
   const [isSmallScreen, setIsSmallScreen] = useState(false);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 740px)");
+    const mediaQuery = window.matchMedia("(max-width: 770px)");
     mediaQuery.addListener(handleMediaQueryChange);
     handleMediaQueryChange(mediaQuery);
 
@@ -52,15 +54,3 @@ const Header = ({activeTab}) => {
 
 
 export default Header
-
-// const Header = ({activeTab}) => (
-//   <header className={styles.header}>
-    // <Link to="/" style={{minWidth:"150px",maxWidth:"200px",flex:"1"}}>
-    //   <div style={{minWidth:"150px",maxWidth:"200px",flex:"1"}}> 
-    //     <Logo/>
-    //   </div>
-    // </Link>
-//     <Navigation activeTab = {activeTab} componentStyle="Header"/>
-//   </header>
-// )
-

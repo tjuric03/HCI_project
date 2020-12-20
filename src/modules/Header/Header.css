@@ -1,57 +1,51 @@
 .Header {
-    /* max-height: 70px; */
-    width: 100vw;
-    display: grid;
-    grid-template-areas: "logo nav";
-    grid-template-columns: 150px auto;
-    background-image:linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0.0),
-        rgba(0, 0, 0, 0.2)
-      ), url("https://pantoiran.ir/wp-content/uploads/2020/11/initiatives-header-background.png");
-    background-size: 100% 94px;
-    background-repeat: no-repeat;
-    background-position: top;
-    /* background-position:  */
-    /* Cosmetics */
-    /* background-color: #cf4d3c; */
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    
-  }
-  
-  .Logo {
-    grid-area: logo;
-    height: 70px;
+  width: 100%;
+  display: grid;
+  grid-template-areas: "logo nav";
+  grid-template-columns: 150px auto;
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.2)
+    ),
+    url("https://pantoiran.ir/wp-content/uploads/2020/11/initiatives-header-background.png");
+  /* background-size: 100% 96px;
+    background-repeat: no-repeat;*/
+  /* background-position: center; */
+  background-size: cover;
+  /* Cosmetics */
+  /* background-color: #cf4d3c; */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.Burger {
+  display: none;
+  grid-area: burger;
+  margin: 0 20px 0 0;
+  padding: 0;
+  justify-self: end;
+  font-size: 40px;
+  border: none;
+  background: none;
+  outline: none;
+  transition: 0.1s; /* TRY PUTTING THIS TRANSITION TO 0 */
+  cursor: pointer;
+}
+.Burger:active {
+  transform: scale(1.2);
+}
+
+.Burger:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 770px) {
+  .Header {
+    grid-template-areas: "logo burger" "nav nav";
   }
   .Burger {
-    display: none;
-    grid-area: burger;
-    margin: 0 20px 0 0;
-    padding: 0;
-    justify-self: end;
-    font-size: 40px;
-    border: none;
-    background: none;
-    outline: none;
-    transition: 0.1s; /* TRY PUTTING THIS TRANSITION TO 0 */
-    cursor: pointer;
-    
+    display: inline;
+    margin: 10px 30px;
   }
-  .Burger:active {
-    transform: scale(1.2);
-  }
-
-  .Burger:hover{
-    transform: scale(1.1);
-  }
-  
-  @media (max-width: 740px) {
-    .Header {
-      grid-template-areas: "logo burger" "nav nav";
-    }
-    .Burger {
-      display: inline;
-      margin: 10px 30px;
-    }
-  }
-  
+}

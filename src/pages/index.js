@@ -26,7 +26,7 @@ query News{
         slug
         sport
         image {
-          fluid(maxWidth: 1100, maxHeight: 600, quality: 100, ) {
+          fluid(maxWidth: 1920,maxHeight:1080,cropFocus: CENTER) {
             ...GatsbyContentfulFluid
           }
           title

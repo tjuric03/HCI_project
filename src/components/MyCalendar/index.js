@@ -102,9 +102,11 @@ const MyCalendar = () => {
 
           let newStyle = {
             backgroundColor: colors[event.sport],
-            color: "black",
+            color: "white",
             outlineColor: newColor,
-            border: "none"
+            border: "none",
+            textTransform: "uppercase",
+            fontSize: "14px",
           }
           return {
             className: "",

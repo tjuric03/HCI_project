@@ -1,6 +1,8 @@
 import React from "react"
 import Featured from "../../components/Featured"
 import LatestNews from "../../components/LatestNews"
+import Cards from "../../components/Cards"
+
 
 import styles from "./style.module.css"
 
@@ -11,7 +13,8 @@ const TitlePage = ({newsArray}) => {
   return (
     <section className={styles.container}>
         <Featured mostRecentNews={mostRecentNews}></Featured>
-        <LatestNews news={newsArray.slice(1)}></LatestNews>
+        <Cards news={newsArray.slice(1,6)}></Cards>
+        {/* <LatestNews news={newsArray.slice(1)}></LatestNews> */}
     </section>
   )
 }
