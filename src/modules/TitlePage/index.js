@@ -1,10 +1,9 @@
 import React from "react"
 import Featured from "../../components/Featured"
-import LatestNews from "../../components/LatestNews"
 import Cards from "../../components/Cards"
 
-
 import styles from "./style.module.css"
+import Paralympics from "../../components/Paralympics"
 
 const TitlePage = ({newsArray}) => {
 
@@ -14,7 +13,7 @@ const TitlePage = ({newsArray}) => {
     <section className={styles.container}>
         <Featured mostRecentNews={mostRecentNews}></Featured>
         <Cards news={newsArray.slice(1,6)}></Cards>
-        {/* <LatestNews news={newsArray.slice(1)}></LatestNews> */}
+        <Paralympics></Paralympics>
     </section>
   )
 }

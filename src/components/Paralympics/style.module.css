@@ -1,0 +1,163 @@
+.container{
+    max-width: 1080px;
+    width: 90%;
+    background-color:white;
+    margin: auto;
+    position: relative;
+}
+
+.flexContainer{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+
+.imageContainer{
+    min-width:100px;
+    max-width:250px;
+    flex: 1;
+}
+
+.title{
+    position: absolute;
+    width: 100%;
+    font-size: 30px;
+    padding-left: 15px;
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+    padding-bottom: 25px;
+    margin: 0px;
+}
+
+.banner{
+    position: absolute;
+    width: 100%;
+    background-color: rgb(255, 157, 206);
+    top: 30%;
+    padding: 0px 15px 15px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    margin: 20px 0;
+}
+
+.banner > section{
+    display: flex;
+}
+
+.banner > div{
+    width: fit-content;
+}
+
+.banner h2{
+    padding-left: 10px;
+}
+
+.text{
+    margin: 20px 0px;
+    width:fit-content;
+    max-width: 30ch;
+    padding: 0 auto;
+    line-height: 1.5;
+    font-size: 20px;
+    align-self: center;
+}
+
+.countdownContainer{
+    display: flex;
+}
+
+.countdownContainer > div{
+    margin: 10px;
+    padding: 5px 10px;
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 4px;
+    background-color: #dd0d87;
+    color: white;
+}
+
+.label{
+    font-size: 12px;
+    padding-bottom: 2px;
+}
+
+.time{
+    font-size: 18px;
+    font-weight:600;
+}
+
+@media only screen and (max-width: 1050px) {
+
+    .banner{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .banner >section {
+        display: block;
+    }
+
+    .title{
+        position: relative;
+    }
+
+    .text{
+        align-self:flex-start;
+    }
+
+    .imageContainer{
+        position: absolute;
+        min-width: 0px;
+        top: 25%;
+    }
+
+    .flexImage{
+        min-width: 201px;
+        max-width: 201px;
+        flex: 1;
+    }
+  }
+
+@media only screen and (max-width: 750px) {
+    .banner{
+        flex-direction: column;
+    }
+    .text{
+        padding-left: 15px;
+    }
+
+}
+
+@media only screen and (max-width: 440px) {
+    .container{
+        font-size: 3.5vw;
+    }
+
+    .text{
+        font-size: 4.5vw;
+    }
+
+    .banner > h2 {
+        text-align: center;
+    }
+
+
+    .countdownContainer{
+        display: grid;
+        grid-template-areas: "el el" "el el";
+        margin: auto;
+    }
+    .imageContainer{
+        position: relative;
+        min-width: 0px;
+        top: 100%;
+    }
+    .countdownContainer{
+        justify-content: space-around;
+    }
+}

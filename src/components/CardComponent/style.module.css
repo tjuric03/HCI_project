@@ -24,6 +24,7 @@
 
 .cards_item_pic_wrap::after {
   content: attr(sport);
+  text-transform: uppercase;
   position: absolute;
   bottom: 0;
   margin-left: 10px;
