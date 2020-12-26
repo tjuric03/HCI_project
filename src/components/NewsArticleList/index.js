@@ -70,7 +70,7 @@ const NewsArticleList = ({ News, uniqueSports }) => {
               {current.map((x) => (
                 <li key={x.node.title}>
                   <NewsArticle
-                    picture={x.node.image.fluid}
+                    picture={x.node.image.fixed}
                     date={x.node.date}
                     header={x.node.title}
                     sport={x.node.sport}

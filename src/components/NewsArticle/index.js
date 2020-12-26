@@ -25,10 +25,10 @@ const NewsArticle = ({picture,date,header,sport,content,slug}) => {
     }
 
     return (
-        <Link to={`/news/${slug}`}>
+        <Link to={`/news/${slug}`} className={styles.link}>
             <article className={styles.container}>
-                <div style={{ width: "200px", height: "200px"}}>
-                    <Img fluid={picture} />
+                <div style={{ width: "300px", height: "200px"}}>
+                    <Img fixed={picture} />
                 </div>
                 <div style={{width: "100%"}}>
                     <div className={styles.infoHeader}>

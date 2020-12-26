@@ -38,6 +38,9 @@ query AllNews{
           }
           title
           description
+          fixed(width: 300, height: 200 quality: 80, cropFocus: FACES) {
+            ...GatsbyContentfulFixed
+          }
         }
         content {
           raw

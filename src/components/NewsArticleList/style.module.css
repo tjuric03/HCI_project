@@ -18,16 +18,17 @@
 
 .select{
     width: 200px;
+    min-width: 150px;
 
 }
 
 .input{
+    min-width: 150px;
     width: 200px;
     height: 34px;
     border: 1px solid lightgrey;
     border-radius: 4px;
     font-size: 16px;
-    /* border: none; */
     text-indent: 30px;
 }
 
@@ -41,7 +42,7 @@ input:focus{
 
 .searchIcon{
     position: absolute;
-    z-index: 5;
+    z-index: 0;
     top: 7px;
     left: 7px;
 }
@@ -72,3 +73,21 @@ ul{
     padding: 9px 20px;
 }
 
+@media only screen and (max-width: 630px) {
+    .articleContainer{
+        width: 300px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .filter{
+        flex-direction: column;
+    }
+    .input{
+        width:300px;
+    }
+    .select{
+        width: 305px;
+        margin-bottom: 15px;
+    }
+}
