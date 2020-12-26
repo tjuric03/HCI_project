@@ -1,0 +1,37 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.17);
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+    margin: 20px 0px;
+}
+
+.container:hover{
+    box-shadow: 0 6px 15px rgba(0, 102, 255, 0.3);
+}
+
+.infoHeader{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 15px;
+}
+.infoHeader > div{
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.infoBody{
+    margin: 15px 15px;
+}
+
+.text{
+    line-height: 1.44;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    -webkit-box-orient: vertical;
+}

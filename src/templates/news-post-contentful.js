@@ -9,7 +9,6 @@ const NewsPostContentful = props => {
 
     const post = props.data.contentfulPost;
     const content = documentToReactComponents(JSON.parse(post.content.raw));
-    console.log(content);
 
     return (
         <HeaderFooterLayout activeTab="News">

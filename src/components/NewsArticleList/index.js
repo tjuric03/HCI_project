@@ -4,6 +4,10 @@ import { matchSorter } from "match-sorter"
 import ShowMore from "@tedconf/react-show-more"
 import Select from "react-select"
 
+import styles from './style.module.css' 
+import {AiOutlineSearch} from 'react-icons/ai'
+import { relativeTimeRounding } from "moment"
+
 
 const NewsArticleList = ({ News, uniqueSports }) => {
   const [newsList, setNewsList] = useState(News);
@@ -47,18 +51,21 @@ const NewsArticleList = ({ News, uniqueSports }) => {
   }
 
   return (
-    <div>
-      <div>
-        <input
-          style={{ margin: "10px", width: "50%" }}
-          onChange={(e)=>handleChangeFilter(e.target.value,"title")}
-          placeholder="Search"
-        />
-        <Select options={uniqueSports} onChange={(e)=>handleChangeFilter(e ? e.value : null,"sport")} isClearable={true}/>
+    <div className={styles.mainContainer}>
+      <div className={styles.filter}>
+        <Select className = {styles.select} options={uniqueSports} onChange={(e)=>handleChangeFilter(e ? e.value : null,"sport")} isClearable={true}/>
+        <div className={styles.inputContainer}>
+          <span className={styles.searchIcon}><AiOutlineSearch color="darkgrey" size="20px" style={{verticalAlign:"middle"}}/></span>
+          <input
+            className={styles.input}
+            onChange={(e)=>handleChangeFilter(e.target.value,"title")}
+            placeholder="Search"
+          />
+        </div>
       </div>
       <ShowMore items={newsList} by={showInc}>
         {({ current, onMore }) => (
-          <div>
+          <div className={styles.articleContainer}>
             <ul>
               {current.map((x) => (
                 <li key={x.node.title}>
@@ -66,19 +73,23 @@ const NewsArticleList = ({ News, uniqueSports }) => {
                     picture={x.node.image.fluid}
                     date={x.node.date}
                     header={x.node.title}
+                    sport={x.node.sport}
+                    content={x.node.content}
+                    slug={x.node.slug}
                   ></NewsArticle>
                 </li>
               ))}
             </ul>
             {News.length > showInc && onMore ? (
-              <button
+              <div
                 disabled={!onMore}
                 onClick={() => {
                   if (!!onMore) onMore()
                 }}
+                className={styles.moreButton}
               >
-                more
-              </button>
+                More
+              </div>
             ) : null}
           </div>
         )}
