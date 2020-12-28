@@ -1,6 +1,7 @@
 .container{
     margin: 20px auto;
     max-width: 1024px;
+    line-height: 1.44;
 }
 
 .article{
@@ -8,10 +9,83 @@
 }
 
 .article h1{
-    font-size: xx-large;
+    font-size: 41px;
     text-align: left;
 }
 
 .author{
     color: rgb(90, 90, 90);
+}
+
+.date{
+    color: rgb(90, 90, 90);
+    font-size: 14px;
+    margin: 10px 0px;
+}
+
+.linkContainer{
+    margin: 20px auto;
+    padding: 0px 25px;
+    max-width: 1024px;
+    line-height: 1.44;
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-between; */
+    display: grid;
+    grid-template-areas: "button1 sportbutton button2";
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    justify-items: center;
+}
+
+
+.sportButton{
+    /* position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0); */
+    grid-area: sportbutton;
+    background-color:  #2684ff;
+    color:white;
+    width: fit-content;
+    font-size: 16px;
+    border-radius: 3px;
+    text-align: center;
+    padding: 5px 20px;
+    box-sizing: border-box;
+    text-transform: uppercase;
+}
+
+.button{
+    background-color:  #2684ff;
+    color:white;
+    width: 120px;
+    font-size: 16px;
+    border-radius: 3px;
+    text-align: center;
+    padding: 5px 20px;
+    box-sizing: border-box;
+    text-transform: uppercase;
+}
+
+.button:hover, .sportButton:hover, .smallButton:hover{
+    text-decoration: underline;
+}
+
+.smallButton{
+    background-color:  #2684ff;
+    color:white;
+    width: fit-content;
+    font-size: 16px;
+    border-radius: 3px;
+    text-align: center;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 500px){
+    .article h1{
+        font-size: 36px;
+        text-align: left;
+    }
 }

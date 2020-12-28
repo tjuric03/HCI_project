@@ -7,7 +7,7 @@ import styles from "./style.module.css"
 const NewsArticle = ({picture,date,header,sport,content,slug}) => {
 
     const dateObj = new Date(date);
-    const options = {month: "long",day:"numeric",year:"numeric"};
+    const options = {month: "long",day:"numeric",year:"numeric",};
     const formattedDate = dateObj.toLocaleDateString("en-US",options);
 
     const parsedContent = (JSON.parse(content.raw));

@@ -17,17 +17,24 @@ exports.createPages = ({ graphql, actions }) => {
     const newsPost = path.resolve(`./src/templates/news-post-contentful.js`)
 
     return graphql(`
-        {
-        allContentfulPost(filter: { node_locale: { eq: "en-US" } }) {
-            edges {
+    {
+        allContentfulPost(filter: {node_locale: {eq: "en-US"}}) {
+          edges {
             node {
-                title
-                slug
-                date
+              title
+              slug
+              date
             }
+            previous {
+              slug
             }
+            next {
+              slug
+            }
+          }
         }
-        }
+      }
+      
     `
     ).then(result => {
         if (result.errors) {
@@ -42,7 +49,9 @@ exports.createPages = ({ graphql, actions }) => {
             component: newsPost,
             // context is sent to the template page as a prop
             context:{
-                slug: post.node.slug
+                slug: post.node.slug,
+                prev: post.previous,
+                next: post.next
             }
         })
     })

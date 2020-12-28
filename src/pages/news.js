@@ -1,6 +1,7 @@
 import React from 'react'
 import HeaderFooterLayout from '../layouts/HeaderFooterLayout'
 import NewsArticleList from '../components/NewsArticleList'
+import { graphql } from 'gatsby'
 
 const News = (props) => {
 
@@ -15,7 +16,7 @@ const News = (props) => {
 
     return(
         <HeaderFooterLayout activeTab="News">
-            <NewsArticleList News= {newsArray} uniqueSports={options} ></NewsArticleList>
+            <NewsArticleList News= {newsArray} uniqueSports={options} location={props.location} ></NewsArticleList>
         </HeaderFooterLayout>
     )
 }

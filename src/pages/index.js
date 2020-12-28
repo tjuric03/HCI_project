@@ -1,6 +1,7 @@
 import React from "react"
 import HeaderFooterLayout from '../layouts/HeaderFooterLayout'
 import TitlePage from "../modules/TitlePage"
+import { graphql } from 'gatsby'
 
 const IndexPage = (props) => {
   
@@ -22,7 +23,7 @@ query News{
       node {
         author
         title
-        date(formatString: "MMMM DD, YYYY, HH:mm")
+        date(formatString: "MMMM DD, YYYY, hh:mm A")
         slug
         sport
         image {

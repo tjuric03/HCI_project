@@ -3,6 +3,7 @@ import AboutParagraph from '../components/AboutParagraph'
 import HeaderFooterLayout from '../layouts/HeaderFooterLayout'
 import {aboutText1} from '../constants/const'
 import AboutMainImage from '../components/Images/AboutMainImage'
+import { graphql } from 'gatsby'
 
 const About = (props) => {
 
