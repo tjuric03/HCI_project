@@ -1,18 +1,19 @@
-import { graphql } from "gatsby"
 import React from "react"
 import Featured from "../../components/Featured"
-import LatestNews from "../../components/LatestNews"
+import Cards from "../../components/Cards"
 
 import styles from "./style.module.css"
+import Paralympics from "../../components/Paralympics"
 
 const TitlePage = ({newsArray}) => {
 
   const mostRecentNews = newsArray[0];
 
   return (
-    <section >
+    <section className={styles.container}>
         <Featured mostRecentNews={mostRecentNews}></Featured>
-        <LatestNews news={newsArray.slice(1)}></LatestNews>
+        <Cards news={newsArray.slice(1,6)}></Cards>
+        <Paralympics></Paralympics>
     </section>
   )
 }

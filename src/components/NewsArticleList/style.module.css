@@ -1,0 +1,99 @@
+.mainContainer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.filter{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px auto;
+    width: 100%;
+}
+
+.select{
+    width: 200px;
+    min-width: 150px;
+
+}
+
+.input{
+    min-width: 150px;
+    width: 200px;
+    height: 34px;
+    border: 1px solid lightgrey;
+    border-radius: 4px;
+    font-size: 16px;
+    text-indent: 30px;
+}
+
+input:focus{
+    outline-color: #2684ff;
+}
+
+.inputContainer{
+    position:relative;
+}
+
+.searchIcon{
+    position: absolute;
+    z-index: 0;
+    top: 7px;
+    left: 7px;
+}
+
+.articleContainer{
+    width: 100%;
+}
+
+ul{
+    list-style: none;
+}
+
+.moreButton{
+    display: block;
+    background-color: white;
+    width: fit-content;
+    font-size: 16px;
+    border: 1px solid lightgrey;
+    border-radius: 4px;
+    text-align: center;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin: 0px auto 15px;
+}
+
+.moreButton:hover{
+    cursor: pointer;
+    border: 2px solid #2684ff;
+    color: #2684ff;
+    padding: 9px 20px;
+}
+
+.moreButton:focus{
+    outline-color: #2684ff;
+}
+
+@media only screen and (max-width: 630px) {
+    .articleContainer{
+        width: 300px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .filter{
+        flex-direction: column;
+    }
+    .input{
+        width:300px;
+    }
+    .select{
+        width: 305px;
+        margin-bottom: 15px;
+    }
+}

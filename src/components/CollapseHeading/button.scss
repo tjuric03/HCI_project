@@ -1,0 +1,17 @@
+.icon {
+    width: 35px;
+    height: 35px;
+    transition: transform 1000ms cubic-bezier(0, 1, 0, 1);
+    will-change: transform;
+    &--expanded {
+      transform: rotateZ(-179.99deg);
+    }
+  }
+  
+  .rotate90 {
+    transform: rotateZ(90deg);
+    width: 35px;
+    height: 35px;
+    margin: 0;
+  }
+  

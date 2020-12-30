@@ -5,8 +5,8 @@ export default [
     id: 0,
     title: 'Football Semi-finals',
     allDay: false,
-    start: new Date("December 16, 2020 20:15:30"),
-    end: new Date("December 16, 2020 23:15:30"),
+    start: new Date("December 28, 2020 07:15:30"),
+    end: new Date("December 28, 2020 10:15:30"),
     sport: "Football",
     location: "Something Arena"
   },
@@ -40,8 +40,8 @@ export default [
 ]
 
 export const colors = {
-  "Basketball": "lightsalmon",
-  "Football": "lightgreen",
-  "Swimming": "lightblue",
-  "Trampoline": "lightcoral"
+  "Basketball": "#FF6600",
+  "Football": "#33CC33",
+  "Swimming": "#66CCFF",
+  "Trampoline": "#FF6666"
 };

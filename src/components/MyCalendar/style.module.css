@@ -1,10 +1,8 @@
 .calendarContainer{
-    height:650px;
     max-width: 1200px;
     margin: 20px auto;
-}
-
-.calendar{
+    height:650px;
+    
 }
 
 .popup{
@@ -20,4 +18,50 @@
 .icons{
     vertical-align: middle;
     padding-right: 10px;
+    color: black;
+}
+
+.rbcEventContent {
+    width: 100%;
+    flex: 1 1 0;
+    word-wrap: break-word;
+    line-height: 1;
+    height: 100%;
+    min-height: 1em;
+    /* Don't tuch above this line */
+  }
+
+/* .rbcEventContent::after{
+    content: "";
+    position: absolute;
+     */
+    /* top: -9px;
+    left: 50%; */
+    /* transform: translate(-50%, 0);
+    width: inherit;
+    height: inherit;
+    background: #E83474;
+    opacity: 0.5;
+} */
+
+@media (max-width: 840px) {
+    .calendarContainer{
+       height: 500px;
+       font-size: 14px;
+    }
+    .rbcEventContent{
+        font-size: 12px;
+    }
+    .popup{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 700px) {
+    .rbcEventContent{
+        font-size: 12px;
+    }
+    .popup{
+        font-size: 16px;
+    }
 }

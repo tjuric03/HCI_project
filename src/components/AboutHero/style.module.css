@@ -1,0 +1,63 @@
+.featuredImage{
+    position: relative;
+    min-height: 540px;
+    width: 100%;
+    margin: auto;
+    background-size: cover;
+    margin: 20px 0px;
+    background-position-y: 70%;
+}
+
+.featuredImage > div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    padding: 20px 50px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: fit-content;
+    box-sizing:border-box;
+    align-items: center;
+}
+
+.featuredImage h1{
+    font-size: 56px;
+    font-weight:bold;
+    margin: 5px 0 5px;
+    text-align: center;
+}
+
+@media screen and (max-width: 740px){
+    .featuredImage{
+        min-height: 350px;
+    }
+
+    .featuredImage > div{
+        padding: 5px 20px;
+    }
+
+    .featuredImage h1{
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 600px){
+
+    .featuredImage h1{
+        font-size: 4.5vw;
+    }
+} 
+
+@media screen and (max-width: 500px){
+    .featuredImage{
+        min-height: 200px;
+    }
+
+
+    .featuredImage h1{
+        font-size: 20px;
+    }
+
+} 
