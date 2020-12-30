@@ -21,7 +21,7 @@
 }
 
 .featuredImage:hover div{
-    transform: translateX(50px);  
+    transform: translateX(5%);  
 }
 
 .featuredImage h1{
@@ -38,9 +38,52 @@
     border-bottom: 1px solid white;
 }
 
-@media screen and (max-width: 800px){
-    
+.featuredImage p{
+    margin: 0;
 }
-@media screen and (max-width: 800px){
-    
+
+@media screen and (max-width: 740px){
+    .featuredImage{
+        min-height: 350px;
+    }
+
+    .featuredImage > div{
+        padding: 5px 20px;
+    }
+
+    .featuredImage h1{
+        font-size: 32px;
+    }
+    .featuredImage h2{
+        font-size: 16px;
+    }
+    .featuredImage p{
+        font-size: 14px;
+    }
 }
+
+@media screen and (max-width: 600px){
+
+    .featuredImage h1{
+        font-size: 4.5vw;
+    }
+    .featuredImage h2{
+        font-size: 2.5vw;
+    }
+    .featuredImage p{
+        font-size: 2.4vw;
+    }
+} 
+
+@media screen and (max-width: 500px){
+
+    .featuredImage h1{
+        font-size: 20px;
+    }
+    .featuredImage h2{
+        font-size: 14px;
+    }
+    .featuredImage p{
+        font-size: 12px;
+    }
+} 

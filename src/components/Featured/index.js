@@ -16,7 +16,7 @@ const Featured = ({mostRecentNews}) => {
                     <div>
                         <h2>{mostRecentNews.node.sport.toUpperCase()}</h2>
                         <h1>{mostRecentNews.node.title}</h1>
-                        <text>{mostRecentNews.node.date}</text>
+                        <p>{mostRecentNews.node.date}</p>
                     </div>
                 </BackgroundImage>
         </Link>

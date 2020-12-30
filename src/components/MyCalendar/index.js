@@ -70,7 +70,7 @@ const EventComponent = ({ event }) => {
       theme={"light"}
       placement={"bottom"}
       offset={[0, 0]}
-      zIndex={"1000"}
+      zIndex={5}
       duration= "0"
       appendTo={() =>
         document.querySelector(".style-module--calendarContainer--2RFKR")
@@ -78,7 +78,7 @@ const EventComponent = ({ event }) => {
       delay={[0, 0]}
       
     >
-      <div className="rbc-event-content" title={event.title} style={{padding:"2px 5px"}}>
+      <div className={styles.rbcEventContent} title={event.title} style={{padding:"2px 5px"}}>
         {event.sport}
       </div>
     </Tippy>
@@ -114,7 +114,7 @@ const MyCalendar = () => {
           }
         }}
         onSelectEvent={event => {
-
+            console.log("test");
         }}
       />
     </div>

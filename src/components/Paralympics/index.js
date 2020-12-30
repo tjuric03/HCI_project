@@ -39,7 +39,7 @@ const Paralympics = () => {
                             <Countdown 
                                 date={new Date("24 August 2021")}
                                 renderer={renderer}
-                                zeroPadTime="2"
+                                zeroPadTime={2}
                             >
                             </Countdown>
                         </div>

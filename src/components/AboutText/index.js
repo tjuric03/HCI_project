@@ -1,14 +1,10 @@
-import React from "react";
+import React from "react"
+import styles from "./style.module.css"
 
-export const navTabs = [
-    {tab: 'Home', to:'/'},
-    {tab: 'News', to:'/news'},
-    {tab: 'Schedule', to:'/schedule'},
-    {tab: 'About', to:'/about'}
-];
-
-export const aboutContent1 = <>
-    <h1> HISTORY </h1>
+const AboutText = () => {
+  return (
+    <div className={styles.container}>
+      <h1> HISTORY </h1>
       <p>
         {" "}
         When he announced in Paris, on a winter's evening in 1892, the
@@ -20,6 +16,7 @@ export const aboutContent1 = <>
         the first Olympic Games of the modern era opened in Athens on 6 April
         1896; and the Olympic Movement has not stopped growing ever since.{" "}
       </p>
+      <h1> THE INTERNATIONAL OLYMPIC COMMITTEE </h1>
       <p>
         The International Olympic Committee (IOC) is a not-for-profit
         independent international organisation that is committed to building a
@@ -27,9 +24,17 @@ export const aboutContent1 = <>
         years before the first Olympic Games of the modern era in April 1896,
         the IOC is the supreme authority of the Olympic Movement.
       </p>
-</>
-export const aboutContent2 = <>
-    <h1> THE OLYMPIC MOVEMENT </h1>
+      <p>
+        As the leader of the Olympic Movement, the IOC acts as a catalyst for
+        collaboration between all parties of the Olympic family, from the NOCs,
+        the IFs, the athletes and the OCOGs to the Worldwide Olympic Partners,
+        broadcast partners and United Nations (UN) agencies, and shepherds
+        success through a wide range of programmes and projects. On this basis,
+        it ensures the regular celebration of the Olympic Games, supports all
+        affiliated member organisations of the Olympic Movement and strongly
+        encourages, by appropriate means, the promotion of the Olympic values.
+      </p>
+      <h1> THE OLYMPIC MOVEMENT </h1>
       <p>
         The three main constituents of the Olympic Movement are the
         International Olympic Committee (“IOC”), the International Sports
@@ -49,9 +54,7 @@ export const aboutContent2 = <>
         educating youth through sport practised in accordance with Olympism and
         its values.” (Olympic Charter, Chapter 1, Rule 1.1)
       </p>
-</>
-export const aboutContent3 = <>
-    <h1> FUNDING </h1>
+      <h1> FUNDING </h1>
       <p>
         The International Olympic Committee is entirely privately funded and
         ever since the first modern Olympic Games in Athens in 1896 it has
@@ -69,4 +72,8 @@ export const aboutContent3 = <>
         coverage has been the most significant factor in the promotion of the
         Olympic ideals and the growth of the Olympic Games worldwide.
       </p>
-</>
+    </div>
+  )
+}
+
+export default AboutText
