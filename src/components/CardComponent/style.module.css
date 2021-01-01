@@ -57,8 +57,6 @@
 .cards_item_info {
   transition: all 0.2s linear;
   padding: 20px 30px 30px;
-  /* width: 100%;
-  box-sizing: border-box; */
 }
 
 .cards_item_text {

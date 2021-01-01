@@ -2,12 +2,12 @@ import React from "react"
 import moment from "moment"
 import { Calendar, momentLocalizer } from "react-big-calendar"
 import events, { colors } from "../../constants/events"
-// import 'react-big-calendar/lib/css/react-big-calendar.css';
 import styles from "./style.module.css"
 import "./cal.scss"
+
 import Tippy from "@tippyjs/react"
-import "react-tippy/dist/tippy.css"
 import "tippy.js/themes/light.css"
+
 import {AiFillClockCircle} from "react-icons/ai"
 import {MdLocationOn} from "react-icons/md"
 import {GiLaurelsTrophy} from "react-icons/gi"
@@ -112,9 +112,6 @@ const MyCalendar = () => {
             className: "",
             style: newStyle,
           }
-        }}
-        onSelectEvent={event => {
-            console.log("test");
         }}
       />
     </div>

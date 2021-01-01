@@ -7,13 +7,6 @@
       to right,
       rgba(0, 0, 0, 0),
       rgba(0, 0, 0, 0.2) );
-    /* ),
-    url("https://pantoiran.ir/wp-content/uploads/2020/11/initiatives-header-background.png"); */
-  /* background-size: 100% 96px;
-    background-repeat: no-repeat;*/
-  /* background-position: center; */
-  /* Cosmetics */
-  /* background-color: #cf4d3c; */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   position: relative;
 }
@@ -28,7 +21,7 @@
   border: none;
   background: none;
   outline: none;
-  transition: 0.1s; /* TRY PUTTING THIS TRANSITION TO 0 */
+  transition: 0.1s;
   cursor: pointer;
 }
 .Burger:active {

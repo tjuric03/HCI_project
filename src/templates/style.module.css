@@ -28,9 +28,6 @@
     padding: 0px 25px;
     max-width: 1024px;
     line-height: 1.44;
-    /* display: flex;
-    flex-direction: row;
-    justify-content: space-between; */
     display: grid;
     grid-template-areas: "button1 sportbutton button2";
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -39,9 +36,6 @@
 
 
 .sportButton{
-    /* position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0); */
     grid-area: sportbutton;
     background-color:  #2684ff;
     color:white;

@@ -4,7 +4,6 @@ import HeaderFooterLayout from "../layouts/HeaderFooterLayout"
 import { aboutContent1, aboutContent2, aboutContent3 } from "../constants/const"
 import { graphql } from "gatsby"
 import AboutHero from "../components/AboutHero"
-import AboutText from "../components/AboutText"
 
 const About = props => {
   const [about1, about2, about3] = props.data.allFile.edges
@@ -12,15 +11,14 @@ const About = props => {
   return (
     <HeaderFooterLayout activeTab="About">
       <AboutHero></AboutHero>
-      {/* <AboutText></AboutText> */}
       <div style={{display: "flex", flexDirection:"column", alignItems:"center"}}>
-        <AboutParagraph content={aboutContent1} image={about1}>
+        <AboutParagraph content={aboutContent1} image={about2}>
           {" "}
         </AboutParagraph>
-        <AboutParagraph content={aboutContent2} image={about3} reversed={true}>
+        <AboutParagraph content={aboutContent2} image={about1} reversed={true}>
           {" "}
         </AboutParagraph>
-        <AboutParagraph content={aboutContent3} image={about2}>
+        <AboutParagraph content={aboutContent3} image={about3}>
           {" "}
         </AboutParagraph>
       </div>

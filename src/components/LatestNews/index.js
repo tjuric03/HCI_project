@@ -22,7 +22,3 @@ const LatestNews = ({ news }) => {
 }
 
 export default LatestNews
-
-// <li><NewsArticle header="News1" picture={<NewsImage1/>}/></li>
-//                 <li><NewsArticle header="News2" picture={<NewsImage2/>}/></li>
-//                 <li><NewsArticle header="News3" picture={<NewsImage1/>}/></li>
