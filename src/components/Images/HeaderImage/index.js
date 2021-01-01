@@ -10,7 +10,7 @@ const HeaderImage = ({children}) => {
       id
       childImageSharp {
         fluid(maxWidth: 1920, maxHeight: 185, fit: FILL, quality: 100) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
@@ -20,7 +20,7 @@ const HeaderImage = ({children}) => {
     <BackgroundImage
         tag = "div"
         fluid={data.file.childImageSharp.fluid}
-        style={{display: "block", minHeight:"88px", zIndex: 5, backgroundPosition:"left"}}
+        style={{display: "block", minHeight:"89px", zIndex: 5, backgroundPosition:"left"}}
     >
         {children}
     </BackgroundImage>

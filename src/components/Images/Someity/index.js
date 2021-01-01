@@ -8,7 +8,7 @@ const Someity = () => {
     file(relativePath: {eq: "Someity.png"}) {
       childImageSharp {
         fluid(maxWidth: 300, maxHeight: 400) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }

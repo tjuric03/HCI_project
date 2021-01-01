@@ -11,7 +11,7 @@ const AboutHero = () => {
           id
           childImageSharp {
             fluid(quality: 100, maxHeight: 1080, maxWidth: 1920) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }

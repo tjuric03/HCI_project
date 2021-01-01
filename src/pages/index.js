@@ -18,7 +18,7 @@ export default IndexPage
 
 export const pageQuery = graphql`
 query News{
-  allContentfulPost(filter: {node_locale: {eq: "en-US"}}, sort: {fields: date, order: DESC}) {
+  allContentfulPost(filter: {node_locale: {eq: "en-US"}}, sort: {fields: date, order: DESC}, limit: 6) {
     edges {
       node {
         author
@@ -28,13 +28,8 @@ query News{
         sport
         image {
           fluid(maxWidth: 1920,maxHeight:1080,cropFocus: CENTER) {
-            ...GatsbyContentfulFluid
+            ...GatsbyContentfulFluid_withWebp
           }
-          title
-          description
-        }
-        content {
-          raw
         }
       }
     }

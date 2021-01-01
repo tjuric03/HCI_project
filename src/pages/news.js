@@ -28,19 +28,13 @@ query AllNews{
   allContentfulPost(filter: {node_locale: {eq: "en-US"}}, sort: {fields: date, order: DESC}) {
     edges {
       node {
-        author
         title
         date(formatString: "MMMM DD, YYYY, HH:mm")
         slug
         sport
         image {
-          fluid(maxWidth: 1920,maxHeight:1080,cropFocus: CENTER) {
-            ...GatsbyContentfulFluid
-          }
-          title
-          description
           fixed(width: 300, height: 200 quality: 80, cropFocus: FACES) {
-            ...GatsbyContentfulFixed
+            ...GatsbyContentfulFixed_withWebp
           }
         }
         content {

@@ -96,10 +96,8 @@ export const pageQuery = graphql`
       date(formatString: "MMMM DD, YYYY, hh:mm A")
       image {
         fluid(maxWidth: 1100, maxHeight: 600, quality: 100) {
-          ...GatsbyContentfulFluid
+          ...GatsbyContentfulFluid_withWebp
         }
-        title
-        description
       }
       sport
       title

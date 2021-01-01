@@ -21,9 +21,7 @@ exports.createPages = ({ graphql, actions }) => {
         allContentfulPost(filter: {node_locale: {eq: "en-US"}}) {
           edges {
             node {
-              title
               slug
-              date
             }
             previous {
               slug

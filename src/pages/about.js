@@ -36,10 +36,10 @@ export const imageQuery = graphql`
         childImageSharp {
           fluid(maxWidth: 900, maxHeight: 600, quality: 100,cropFocus: CENTER) {
             originalName
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
           fixed(width: 400, height: 400, cropFocus: CENTER, quality: 100){
-            ...GatsbyImageSharpFixed
+            ...GatsbyImageSharpFixed_withWebp
           }
         }
       }
