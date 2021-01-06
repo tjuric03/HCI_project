@@ -30,15 +30,14 @@ export default About
 
 export const imageQuery = graphql`
 {
-  allFile(filter: {extension: {regex: "/(jpg)|(jpeg)|(png)/"}, relativeDirectory: {eq: "about"}}) {
+  allFile(filter: {extension: {regex: "/(jpg)|(jpeg)|(png)/"}, relativeDirectory: {eq: "about"}}, sort: {order: ASC, fields: name}) {
     edges {
       node {
         childImageSharp {
-          fluid(maxWidth: 900, maxHeight: 600, quality: 80,cropFocus: CENTER) {
-            originalName
+          fluid(maxWidth: 900, maxHeight: 600, quality: 80, cropFocus: CENTER) {
             ...GatsbyImageSharpFluid_withWebp
           }
-          fixed(width: 400, height: 400, cropFocus: CENTER, quality: 70){
+          fixed(width: 400, height: 400, cropFocus: CENTER, quality: 70) {
             ...GatsbyImageSharpFixed_withWebp
           }
         }
