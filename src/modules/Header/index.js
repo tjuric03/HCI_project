@@ -9,7 +9,7 @@ import HeaderImage from "../../components/Images/HeaderImage"
 
 const Header = ({activeTab}) => {
   const [isNavVisible, setNavVisibility] = useState(false);
-  const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const [isSmallScreen, setIsSmallScreen] = useState(true);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 770px)");
@@ -24,7 +24,6 @@ const Header = ({activeTab}) => {
   const handleMediaQueryChange = (mediaQuery) => {
     if (mediaQuery.matches) {
       setIsSmallScreen(true);
-      setNavVisibility(false);
     } else {
       setIsSmallScreen(false);
     }

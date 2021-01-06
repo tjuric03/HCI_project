@@ -59,6 +59,7 @@ const NewsArticleList = ({ News, uniqueSports, location }) => {
     <div className={styles.mainContainer}>
       <div className={styles.filter}>
         <Select
+          placeholder="Sport..."
           defaultValue={location.state ? uniqueSports.find(option=> option.value === location.state.sport) : null}
           className={styles.select}
           options={uniqueSports}
@@ -76,13 +77,14 @@ const NewsArticleList = ({ News, uniqueSports, location }) => {
           <input
             className={styles.input}
             onChange={e => handleChangeFilter(e.target.value, "title")}
-            placeholder="Search"
+            placeholder="Search title"
           />
         </div>
       </div>
       <ShowMore items={newsList} by={showInc}>
         {({ current, onMore }) => (
           <div className={styles.articleContainer}>
+            {Object.keys(newsList).length !== 0 ?
             <ul>
               {current.map(x => (
                 <li key={x.node.title}>
@@ -96,17 +98,19 @@ const NewsArticleList = ({ News, uniqueSports, location }) => {
                   ></NewsArticle>
                 </li>
               ))}
-            </ul>
+            </ul> :
+            <div className={styles.noMatchesFound}> Sorry, no matches found... </div>
+            }
             {News.length > showInc && onMore ? (
               <button
-                disabled={!onMore}
-                onClick={() => {
-                  if (!!onMore) onMore()
-                }}
-                onKeyPress={() => {
-                  if (!!onMore) onMore()
-                }}
-                className={styles.moreButton}
+              disabled={!onMore}
+              onClick={() => {
+                if (!!onMore) onMore()
+              }}
+              onKeyPress={() => {
+                if (!!onMore) onMore()
+              }}
+              className={styles.moreButton}
               >
                 More
               </button>

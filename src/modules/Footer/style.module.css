@@ -16,7 +16,10 @@
     text-align: left;
     white-space: nowrap;
     padding: 0;
-    
+}
+
+.footer > .categories > .info > ul{
+    text-align: center;
 }
 
 .media li{

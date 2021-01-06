@@ -11,6 +11,7 @@
 .article h1{
     font-size: 41px;
     text-align: left;
+    margin-bottom: 15px;
 }
 
 .author{
@@ -32,15 +33,19 @@
     grid-template-areas: "button1 sportbutton button2";
     grid-template-columns: repeat(3, minmax(0, 1fr));
     justify-items: center;
+    margin-bottom: 40px;
 }
 
 
 .sportButton{
     grid-area: sportbutton;
-    background-color:  #2684ff;
-    color:white;
+    color:  #2684ff;
+    background-color:  white;
     width: fit-content;
     font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border: solid #2684ff 1px;
     border-radius: 3px;
     text-align: center;
     padding: 5px 20px;

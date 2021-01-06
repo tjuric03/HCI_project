@@ -4,6 +4,8 @@ import { Calendar, momentLocalizer } from "react-big-calendar"
 import events, { colors } from "../../constants/events"
 import styles from "./style.module.css"
 import "./cal.scss"
+import clsx from 'clsx'
+import classNames from "classnames"
 
 import Tippy from "@tippyjs/react"
 import "tippy.js/themes/light.css"
@@ -70,7 +72,7 @@ const EventComponent = ({ event }) => {
       theme={"light"}
       placement={"bottom"}
       offset={[0, 0]}
-      zIndex={5}
+      zIndex={10}
       duration= "0"
       appendTo={() =>
         document.querySelector(".style-module--calendarContainer--2RFKR")
@@ -85,18 +87,90 @@ const EventComponent = ({ event }) => {
   )
 }
 
+const navigate = {
+  PREVIOUS: 'PREV',
+  NEXT: 'NEXT',
+  TODAY: 'TODAY',
+  DATE: 'DATE'
+};
+
+class MyToolbar extends React.Component {
+  render() {
+    let {
+      localizer: { messages },
+      label,
+    } = this.props
+
+    return (
+      <div className={classNames("rbc-toolbar",styles.myStyle)}>
+        <span className="rbc-btn-group">
+          <button
+            type="button"
+            onClick={this.navigate.bind(null, navigate.TODAY)}
+          >
+            {messages.today}
+          </button>
+          <button
+            type="button"
+            onClick={this.navigate.bind(null, navigate.PREVIOUS)}
+          >
+            {messages.previous}
+          </button>
+          <button
+            type="button"
+            onClick={this.navigate.bind(null, navigate.NEXT)}
+          >
+            {messages.next}
+          </button>
+        </span>
+
+        <span className="rbc-toolbar-label">{label}</span>
+
+        <span className="rbc-btn-group">{this.viewNamesGroup(messages)}</span>
+      </div>
+    )
+  }
+
+  navigate = action => {
+    this.props.onNavigate(action)
+  }
+
+  view = view => {
+    this.props.onView(view)
+  }
+
+  viewNamesGroup(messages) {
+    let viewNames = this.props.views
+    const view = this.props.view
+
+    if (viewNames.length > 1) {
+      return viewNames.map(name => (
+        <button
+          type="button"
+          key={name}
+          className={clsx({ 'rbc-active': view === name })}
+          onClick={this.view.bind(null, name)}
+        >
+          {messages[name]}
+        </button>
+      ))
+    }
+  }
+}
+
 const MyCalendar = () => {
 
   return (
     <div className={styles.calendarContainer}>
       <Calendar
+        views={['month', 'day', 'agenda']}
         localizer={localizer}
         events={events}
         startAccessor="start"
         endAccessor="end"
         popup={true}
         className={styles.calendar}
-        components={{ event : EventComponent }}
+        components={{ event : EventComponent, toolbar: MyToolbar }}
         eventPropGetter={(event, start, end, isSelected) => {
           let newColor = LightenDarkenColor(colors[event.sport],-30);
 

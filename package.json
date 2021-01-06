@@ -10,6 +10,7 @@
     "@tedconf/react-show-more": "^1.1.2",
     "@tippyjs/react": "^4.2.0",
     "clamp-js-main": "^0.11.6",
+    "classnames": "^2.2.6",
     "contentful": "^8.1.1",
     "dotenv": "^8.2.0",
     "gatsby": "^2.29.3",

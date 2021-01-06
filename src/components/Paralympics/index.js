@@ -32,15 +32,13 @@ const Paralympics = () => {
                 <div className={styles.banner}>
                     <section>
                         <div className={styles.text}>
-                        The countdown to the Paralympic Games has begun, and as the excitement builds here's everything you need to know!
-                        </div>
-                        <div>
                             <h2>24 AUGUST - 5 SEPTEMBER</h2>
+                            <p>The countdown to the Paralympic Games has begun, and as the excitement builds here's everything you need to know!</p>
                             <Countdown 
-                                date={new Date("24 August 2021")}
-                                renderer={renderer}
-                                zeroPadTime={2}
-                            >
+                                    date={new Date("24 August 2021")}
+                                    renderer={renderer}
+                                    zeroPadTime={2}
+                                >
                             </Countdown>
                         </div>
                     </section>

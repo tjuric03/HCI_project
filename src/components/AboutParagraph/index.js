@@ -30,7 +30,7 @@ const AboutParagraph = ({image, content, reversed}) => {
                 {!isSmallScreen ?
                     <Img fixed={image.node.childImageSharp.fixed}/> :
                     <Img fluid={image.node.childImageSharp.fluid}
-                    imgStyle={{ height: "100%", width: "100%" }}/>
+                    imgStyle={{ objectFit:"contain" }}/>
                     }
                     
             </div>

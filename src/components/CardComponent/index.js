@@ -2,13 +2,17 @@ import React from 'react';
 import { Link } from 'gatsby';
 import styles from "./style.module.css"
 import Image from "gatsby-image"
+import {colors} from "../../constants/events"
+
 
 function CardComponent({image,title,sport,slug}) {
   return (
     <>
       <li className={styles.cards_item}>
         <Link className={styles.cards_item_link} to={`/news/${slug}`}>
-          <figure className={styles.cards_item_pic_wrap} sport={sport}>
+          <figure className={styles.cards_item_pic_wrap} sport={sport}
+            style={{backgroundColor:colors[sport]}}
+          >
             <div className={styles.cards_item_img}>
               <Image
                 fluid={image}
