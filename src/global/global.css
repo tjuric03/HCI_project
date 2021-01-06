@@ -1,6 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/* roboto-regular - latin-ext */
+
 html {
   font-family: 'Roboto', sans-serif;
+  /* font-family: "Roboto"; */
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }

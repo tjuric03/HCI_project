@@ -39,25 +39,25 @@
     }
 
     .featuredImage h1{
-        font-size: 32px;
+        font-size: 36px;
     }
 }
 
 @media screen and (max-width: 600px){
 
     .featuredImage h1{
-        font-size: 4.5vw;
+        font-size: 5.0vw;
     }
 } 
 
 @media screen and (max-width: 500px){
     .featuredImage{
-        min-height: 200px;
+        min-height: 250px;
     }
 
 
     .featuredImage h1{
-        font-size: 20px;
+        font-size: 24px;
     }
 
 } 

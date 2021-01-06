@@ -1,6 +1,6 @@
 .calendarContainer{
     max-width: 1200px;
-    margin: 20px auto;
+    margin: 40px auto;
     height:650px;
     
 }
@@ -30,6 +30,8 @@
     min-height: 1em;
     /* Don't tuch above this line */
   }
+
+
 
 /* .rbcEventContent::after{
     content: "";
@@ -63,5 +65,18 @@
     }
     .popup{
         font-size: 16px;
+    }
+}
+
+@media (max-width: 560px) {
+    .myStyle{
+        display: flex;
+        flex-direction: column;
+        flex-wrap:nowrap;
+    }
+
+    .myStyle > span{
+        margin: 5px;
+        margin-top: 0px;
     }
 }

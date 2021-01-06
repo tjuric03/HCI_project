@@ -13,7 +13,7 @@ const Footer = () => (
                     <Logo/>
                 </div>
                 
-                <ul>
+                <ul className={styles.address}>
                     <li>International Olympic Committee</li>
                     <li>Château de Vidy</li>
                     <li>Case postale 356</li>

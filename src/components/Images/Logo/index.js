@@ -16,7 +16,8 @@ const Logo = () => {
   `)
 
   return (
-      <Img fluid={data.file.childImageSharp.fluid} alt="Logo" imgStyle={{ objectFit: 'contain' }}/>
+      <Img fluid={data.file.childImageSharp.fluid} alt="Logo" imgStyle={{ objectFit: 'contain' }} fadeIn={false}
+      loading="eager"/>
   )
 }
 

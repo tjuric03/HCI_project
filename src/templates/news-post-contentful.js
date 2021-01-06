@@ -36,7 +36,7 @@ const NewsPostContentful = props => {
           <h1>{post.title}</h1>
           <div className={styles.author}>{post.author}</div>
           <div className={styles.date}>{post.date}</div>
-          <hr width="150" align="left"></hr>
+          <hr width="200" align="left"></hr>
           <div
             style={{
               minWidth: "250px",

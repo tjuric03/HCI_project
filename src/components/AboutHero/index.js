@@ -10,7 +10,7 @@ const AboutHero = () => {
         file(relativePath: {eq: "ioc.jpg"}) {
           id
           childImageSharp {
-            fluid(quality: 100, maxHeight: 1080, maxWidth: 1920) {
+            fluid(quality: 70, maxHeight: 1080, maxWidth: 1920) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }

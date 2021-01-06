@@ -12,10 +12,10 @@ const About = props => {
     <HeaderFooterLayout activeTab="About">
       <AboutHero></AboutHero>
       <div style={{display: "flex", flexDirection:"column", alignItems:"center"}}>
-        <AboutParagraph content={aboutContent1} image={about2}>
+        <AboutParagraph content={aboutContent1} image={about1}>
           {" "}
         </AboutParagraph>
-        <AboutParagraph content={aboutContent2} image={about1} reversed={true}>
+        <AboutParagraph content={aboutContent2} image={about2} reversed={true}>
           {" "}
         </AboutParagraph>
         <AboutParagraph content={aboutContent3} image={about3}>
@@ -30,15 +30,14 @@ export default About
 
 export const imageQuery = graphql`
 {
-  allFile(filter: {extension: {regex: "/(jpg)|(jpeg)|(png)/"}, relativeDirectory: {eq: "about"}}) {
+  allFile(filter: {extension: {regex: "/(jpg)|(jpeg)|(png)/"}, relativeDirectory: {eq: "about"}}, sort: {order: ASC, fields: name}) {
     edges {
       node {
         childImageSharp {
-          fluid(maxWidth: 900, maxHeight: 600, quality: 100,cropFocus: CENTER) {
-            originalName
+          fluid(maxWidth: 900, maxHeight: 600, quality: 80, cropFocus: CENTER) {
             ...GatsbyImageSharpFluid_withWebp
           }
-          fixed(width: 400, height: 400, cropFocus: CENTER, quality: 100){
+          fixed(width: 400, height: 400, cropFocus: CENTER, quality: 70) {
             ...GatsbyImageSharpFixed_withWebp
           }
         }
