@@ -37,7 +37,7 @@ const Footer = () => (
         </div>
     </footer>
     <div className={styles.copyright}>
-        © Copyright 2020. All rights reserved
+        © Copyright 2021. All rights reserved
     </div>
     </>
 )

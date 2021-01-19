@@ -1,8 +1,10 @@
-const dotenv = require('dotenv')
+// const dotenv = require('dotenv')
 
-if (process.env.NODE_ENV !== 'production'){
-  dotenv.config()
-}
+// if (process.env.NODE_ENV !== 'production'){
+//   dotenv.config()
+// }
+
+require("dotenv").config()
 
 module.exports = {
   
@@ -16,7 +18,8 @@ module.exports = {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: "f7wwsvhmspom", //process.env.CONTENTFUL_SPACE_ID,
-        accessToken: `Rzgj3CzKGwieVX_YvRh2KCa96p1gv2HV5cmYiBt_y7w`//process.env.CONTENTFUL_ACCESS_TOKEN
+        accessToken: "Rzgj3CzKGwieVX_YvRh2KCa96p1gv2HV5cmYiBt_y7w", //process.env.CONTENTFUL_ACCESS_TOKEN,
+        downloadLocal: true,
       }
     },
     `gatsby-plugin-sass`,

@@ -43,5 +43,8 @@ export const colors = {
   "Basketball": "#FF6600",
   "Football": "#33CC33",
   "Swimming": "#66CCFF",
-  "Trampoline": "#FF6666"
+  "Trampoline": "#FF6666",
+  "Canoe" : "#008080",
+  "Cycling": "#990033",
+  "Fencing": "#404040",
 };

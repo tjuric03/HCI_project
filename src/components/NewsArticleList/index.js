@@ -18,7 +18,7 @@ const NewsArticleList = ({ News, uniqueSports, location }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  const showInc = 3
+  const showInc = 5
 
   const handleChangeFilter = (value, category) => {
     setFilter(Object.assign(filter, { [category]: value }))

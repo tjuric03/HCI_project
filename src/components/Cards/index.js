@@ -39,16 +39,16 @@ function Cards({news}) {
               slug={news[2].node.slug}
             />
             <CardItem
-              image={news[0].node.image.fluid}
-              title={news[0].node.title}
-              sport={news[0].node.sport}
-              slug={news[0].node.slug}
+              image={news[3].node.image.fluid}
+              title={news[3].node.title}
+              sport={news[3].node.sport}
+              slug={news[3].node.slug}
             />
             <CardItem
-              image={news[1].node.image.fluid}
-              title={news[1].node.title}
-              sport={news[1].node.sport}
-              slug={news[1].node.slug}
+              image={news[4].node.image.fluid}
+              title={news[4].node.title}
+              sport={news[4].node.sport}
+              slug={news[4].node.slug}
             />
           </ul>
         </div>

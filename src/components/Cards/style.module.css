@@ -36,6 +36,7 @@
 }
 
 .allNews{
+  margin-top: 10px;
   padding: 15px;
   font-size: 16px;
   color: grey;
@@ -43,7 +44,7 @@
 }
 
 .allNews:hover{
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .cards_wrapper {

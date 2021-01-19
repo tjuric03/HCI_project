@@ -18,19 +18,19 @@ exports.createPages = ({ graphql, actions }) => {
 
     return graphql(`
     {
-        allContentfulPost(filter: {node_locale: {eq: "en-US"}}) {
-          edges {
-            node {
-              slug
-            }
-            previous {
-              slug
-            }
-            next {
-              slug
-            }
+      allContentfulPost(filter: {node_locale: {eq: "en-US"}}, sort: {fields: date, order: DESC}) {
+        edges {
+          node {
+            slug
+          }
+          previous {
+            slug
+          }
+          next {
+            slug
           }
         }
+      }
       }
       
     `

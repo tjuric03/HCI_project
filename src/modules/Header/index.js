@@ -13,11 +13,11 @@ const Header = ({activeTab}) => {
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 770px)");
-    mediaQuery.addListener(handleMediaQueryChange);
+    mediaQuery.addEventListener("change",handleMediaQueryChange);
     handleMediaQueryChange(mediaQuery);
 
     return () => {
-      mediaQuery.removeListener(handleMediaQueryChange);
+      mediaQuery.removeEventListener("change",handleMediaQueryChange);
     };
   }, []);
 

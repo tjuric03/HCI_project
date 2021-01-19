@@ -1,5 +1,5 @@
 import { graphql } from "gatsby"
-import React, {useState, useEffect} from "react"
+import React, { useState, useEffect } from "react"
 import HeaderFooterLayout from "../layouts/HeaderFooterLayout"
 import Img from "gatsby-image"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
@@ -9,25 +9,25 @@ import { Link } from "gatsby"
 const NewsPostContentful = props => {
   const post = props.data.contentfulPost
   const content = documentToReactComponents(JSON.parse(post.content.raw))
-  const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const [isSmallScreen, setIsSmallScreen] = useState(false)
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 500px)");
-    mediaQuery.addListener(handleMediaQueryChange);
-    handleMediaQueryChange(mediaQuery);
+    const mediaQuery = window.matchMedia("(max-width: 500px)")
+    mediaQuery.addEventListener("change", handleMediaQueryChange)
+    handleMediaQueryChange(mediaQuery)
 
     return () => {
-      mediaQuery.removeListener(handleMediaQueryChange);
-    };
-  }, []);
-
-  const handleMediaQueryChange = (mediaQuery) => {
-    if (mediaQuery.matches) {
-      setIsSmallScreen(true);
-    } else {
-      setIsSmallScreen(false);
+      mediaQuery.removeEventListener("change", handleMediaQueryChange)
     }
-  };
+  }, [])
+
+  const handleMediaQueryChange = mediaQuery => {
+    if (mediaQuery.matches) {
+      setIsSmallScreen(true)
+    } else {
+      setIsSmallScreen(false)
+    }
+  }
 
   return (
     <HeaderFooterLayout activeTab="News">
@@ -50,34 +50,47 @@ const NewsPostContentful = props => {
         </article>
         <div className={styles.linkContainer}>
           {props.pageContext.next ? (
-            <div style={{width: "100%",display:"flex", justifyContent:"flex-start"}}>
+            <div
+              style={{
+                width: "100%",
+                display: "flex",
+                justifyContent: "flex-start",
+              }}
+            >
               <Link to={`/news/${props.pageContext.next.slug}`}>
-                {!isSmallScreen ? 
-                <div className={styles.button}>Previous</div> :
-                <div className={styles.smallButton}>&lt;</div>
-              }
+                {!isSmallScreen ? (
+                  <div className={styles.button}>Previous</div>
+                ) : (
+                  <div className={styles.smallButton}>&lt;</div>
+                )}
               </Link>
             </div>
-          ) : <div/>}
+          ) : (
+            <div />
+          )}
 
           <Link to="/news" state={{ title: "", sport: post.sport }}>
-            <div
-              className={styles.sportButton}
-            >
-              {post.sport}
-            </div>
-
+            <div className={styles.sportButton}>{post.sport}</div>
           </Link>
           {props.pageContext.prev ? (
-            <div style={{width: "100%",display:"flex", justifyContent:"flex-end"}}>
+            <div
+              style={{
+                width: "100%",
+                display: "flex",
+                justifyContent: "flex-end",
+              }}
+            >
               <Link to={`/news/${props.pageContext.prev.slug}`}>
-              {!isSmallScreen ? 
-                <div className={styles.button}>Next</div> :
-                <div className={styles.smallButton}>&gt;</div>
-              }
+                {!isSmallScreen ? (
+                  <div className={styles.button}>Next</div>
+                ) : (
+                  <div className={styles.smallButton}>&gt;</div>
+                )}
               </Link>
             </div>
-          ) : <div/>}
+          ) : (
+            <div />
+          )}
         </div>
       </div>
     </HeaderFooterLayout>
